@@ -1,0 +1,6 @@
+---
+- name: this playbook installs httpd and apache start the httpd & apache2 service
+  hosts : all
+  become: true
+  roles:
+    - setup-apache

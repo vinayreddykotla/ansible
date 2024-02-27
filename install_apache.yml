@@ -1,0 +1,13 @@
+---
+- name: this playbook installs apache2 and start the apache2 service
+  hosts : appservers
+  become: true
+  tasks:
+  - name : install apache2 package
+    apt:
+      name : apache2
+      state: present
+  - name : start apache2install_apache.yml service
+    service:
+      name: apache2
+      state: started
